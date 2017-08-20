@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/search_bar"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_search"
+        android:title="@string/action_settings"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_toggle_grid_list"
+        android:icon="@drawable/ic_toggle_grid"
+        android:title="Toggle list grid view"
+        app:showAsAction="always"/>
+</menu>

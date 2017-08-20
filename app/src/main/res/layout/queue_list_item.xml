@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+
+        android:id="@+id/checkBox" />
+
+    <ImageView
+        android:src="@android:drawable/sym_def_app_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toEndOf="@id/checkBox"
+        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="5dp"
+        android:id="@+id/queueAlbumThumb"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="70dp"
+        android:orientation="vertical"
+        android:layout_toEndOf="@id/queueAlbumThumb"
+        android:layout_centerInParent="true"
+        >
+
+        <TextView
+            android:text="Song"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/queueSongTv"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_toEndOf="@+id/queueAlbumThumb"
+            android:gravity="center_vertical"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+
+             />
+
+        <TextView
+            android:text="Album"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/queueAlbumTv"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:paddingBottom="5dp"
+         />
+
+    </LinearLayout>
+
+
+
+
+    <ImageView
+        android:src="@drawable/ic_more_vert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/queueItemOption"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="5dp" />
+
+    <ImageView
+        android:src="@drawable/ic_drag_handle"
+        android:id="@+id/dragHandle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/queueItemOption"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp" />
+
+    <ImageView
+        android:id="@+id/queue_currently_playing"
+        android:src="@drawable/ic_currently_playing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/dragHandle"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp" />
+
+
+</RelativeLayout>

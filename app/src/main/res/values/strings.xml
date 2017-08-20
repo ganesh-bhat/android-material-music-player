@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">EmacsMusicPlayer</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <!-- animated paths for play and pause -->
+    <string name="svg_triangle">
+            M0,0 L0,24 12,12 0,0 M12,0 L12,0 12,0 12,0
+  </string>
+  <string name="svg_pause">
+            M0,0 L0,24 1,24 1,0 M12,0 L12,24 13,24 13,0
+  </string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_player_queue">PlayerQueueActivity</string>
+</resources>

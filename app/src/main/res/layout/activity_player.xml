@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/topFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary_2"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <include layout="@layout/player_controls" android:id="@+id/player_playerControls"/>
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:theme="?attr/actionBarTheme"
+                android:minHeight="?attr/actionBarSize"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/playerToolbar"
+                android:title=""
+                android:elevation="10dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/player_album_art"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/playerToolbar"
+                android:layout_above="@+id/relativeLayout3" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:alpha="60"
+                android:layout_above="@id/player_playerControls"
+                android:layout_alignParentStart="true">
+
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/player_ratingbar"
+                    style="?android:attr/ratingBarStyle"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:text="Song Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/player_title"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:lines="1"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="5dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/player_ratingbar"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/lb_basic_card_title_text_color"
+                   />
+
+                <TextView
+                    android:text="Album name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:layout_below="@id/player_title"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/player_subtitile"
+                    android:textStyle="normal"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/lb_basic_card_title_text_color"
+
+                    />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:text="2:03/5:00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/player_track_duration_holder"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="9dp"
+                    android:textColor="@color/lb_basic_card_title_text_color"
+                    android:textStyle="bold" >
+
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/player_track_progress"
+                    android:textColor="@color/lb_basic_card_title_text_color"
+                    android:textStyle="bold"/>
+
+                    <TextView
+                        android:text="/"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/player_track_seperator"
+                        android:textColor="@color/lb_basic_card_title_text_color"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/player_track_duration"
+                        android:textColor="@color/lb_basic_card_title_text_color"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <SeekBar
+            android:id="@+id/player_track_seeker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="51dp"
+            android:layout_alignParentEnd="true"
+            />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/hoverActionFab"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="90dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:src="@drawable/ic_action_fab"
+            app:fabSize="normal"
+            app:elevation="5dp" />
+
+        <LinearLayout
+            android:id="@+id/favoriteActionFabHolder"
+            android:visibility="invisible"
+            android:layout_above="@+id/hoverActionFab"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Mark as Favorite"
+                android:background="@drawable/fab_label_background_decor"
+                android:padding="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <android.support.design.widget.FloatingActionButton
+                android:src="@drawable/ic_action_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="mini"
+                android:id="@+id/favoriteActionFab"
+
+                app:elevation="10dp"
+                app:backgroundTint="?attr/colorAccent" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/editMetadataFabHolder"
+            android:visibility="invisible"
+            android:layout_above="@+id/favoriteActionFabHolder"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Edit Song Metadata"
+                android:padding="15dp"
+                android:background="@drawable/fab_label_background_decor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:src="@drawable/ic_action_edit_metadata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="mini"
+                android:id="@+id/editMetadataFab"
+                app:elevation="10dp"
+                app:backgroundTint="?attr/colorAccent" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/actionLyricsFabHolder"
+            android:visibility="invisible"
+            android:layout_above="@+id/editMetadataFabHolder"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center_vertical"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="See Lyrics"
+                android:padding="15dp"
+                android:background="@drawable/fab_label_background_decor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:src="@drawable/ic_action_lyrics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="mini"
+                android:id="@+id/actionLyricsFab"
+
+                app:elevation="10dp"
+                app:backgroundTint="?attr/colorAccent" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/actionEqualizerFabHolder"
+            android:layout_above="@+id/actionLyricsFabHolder"
+            android:visibility="invisible"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Equalizer"
+                android:padding="15dp"
+                android:background="@drawable/fab_label_background_decor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:src="@drawable/ic_action_equalizer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="mini"
+                android:id="@+id/actionEqualizerFab"
+
+
+                app:elevation="10dp"
+                app:backgroundTint="?attr/colorAccent" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>
+
+

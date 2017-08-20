@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <item android:title="Queue"
+        android:icon="@drawable/ic_action_queue"
+        android:id="@+id/menu_queue"
+        app:showAsAction="ifRoom"
+        android:visible="true"
+        android:enabled="true"
+        android:checkable="true" />
+
+    <item android:title="Share"
+        android:icon="@drawable/ic_share"
+        android:id="@+id/menu_share"
+        app:showAsAction="ifRoom"
+        android:visible="true"
+        android:enabled="true"
+        android:checkable="true" />
+
+    <item android:title="Night/Day"
+        android:icon="@drawable/ic_day_night_mode"
+        android:id="@+id/menu_day_night"
+        app:showAsAction="ifRoom"
+        android:visible="true"
+        android:enabled="true"
+        android:checkable="true" />
+
+    <item android:title="Make it ringtone"
+        android:icon="@drawable/ic_ringtone"
+        android:id="@+id/menu_to_ringtone"
+        app:showAsAction="never"
+        android:visible="true"
+        android:enabled="true"
+        android:checkable="true" />
+</menu>
